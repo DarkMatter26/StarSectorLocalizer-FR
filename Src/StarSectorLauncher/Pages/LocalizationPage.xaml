@@ -18,7 +18,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <HorizontalStackLayout>
-            <Picker Title="Выберте источник перевода"
+            <Picker Title="Sélectionner la source de la traduction"
                     ItemsSource="{Binding TranslationSources}"
                     SelectedItem="{Binding SelectedTranslation}"
                     ItemDisplayBinding="{Binding Converter={baseConverters:DisplayNameConverter}}"/>

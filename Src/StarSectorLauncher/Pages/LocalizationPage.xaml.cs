@@ -50,7 +50,7 @@ public partial class LocalizationPageViewModel : BaseViewModel
 
 	public enum SourceType 
 	{
-		[Display(Name = "װאיכû")]
+		[Display(Name = "Local")]
 		Files,
         [Display(Name = "GitHub")]
         GitHub,
