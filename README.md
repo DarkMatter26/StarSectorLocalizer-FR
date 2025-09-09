@@ -1,22 +1,28 @@
 # StarSectorLocalizer
 # Comment traduire les fichiers ?
 Actuellement, le patcheur peut traduire automatiquement des fichiers de plusieurs types, à savoir : txt, csv, json, jar. Tous les fichiers de traduction doivent être situés dans le même dossier (hiérarchiquement relatif à la racine du jeu) que le fichier qu'ils traduisent. Selon le type de fichier et de gestionnaire, un postfixe est ajouté à son nom, et le type de postfixe est décrit dans chaque cas individuel ci-dessous. Notez également que toutes les clés de traduction sont sensibles à la casse.
+
 ### Traduction de fichiers txt, java
-Les fichiers les plus faciles à traduire sont les fichiers txt et java. Pour ce faire, vous devez ajouter au fichier original sur une nouvelle ligne `[###StarSectorLocalization###]`, et mettez la traduction sur la ligne suivante. Il est important de conserver le texte original dans l'original, car le patcheur le compare avec ce qu'il trouve dans le fichier du jeu, et en cas de mise à jour du texte dans les nouvelles versions du jeu, vous pouvez notifier la nécessité de corriger la traduction. Le séparateur exact entre le texte original et la traduction est une chaîne comme `"\r\n[###StarSectorLocalization###]\r\n"`, le code pour traiter les fichiers txt (et en même temps java) se trouve [lien](/Src/Localizer/Localizers/TxtGeneralLocalizer.cs). 
+Les fichiers les plus faciles à traduire sont les fichiers txt et java. 
+Pour ce faire, vous devez ajouter au fichier original sur une nouvelle ligne `[###StarSectorLocalization###]`, et mettez la traduction sur la ligne suivante. Il est important de conserver le texte original dans l'original, car le patcheur le compare avec ce qu'il trouve dans le fichier du jeu, et en cas de mise à jour du texte dans les nouvelles versions du jeu, vous pouvez notifier la nécessité de corriger la traduction. 
+Le séparateur exact entre le texte original et la traduction est une chaîne comme `"\r\n[###StarSectorLocalization###]\r\n"`, le code pour traiter les fichiers txt (et en même temps java) se trouve [lien](/Src/Localizer/Localizers/TxtGeneralLocalizer.cs). 
 
 Postfixe au nom du fichier : `.translation.txt`
 
 Exemple de traduction d'un fichier txt : [lien].(/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/mission_text.txt.translation.txt)
 
 ### Traduire des fichiers json
-Pour traduire un fichier json, vous devrez créer un fichier json - un dictionnaire, qui contiendra des paires clé-valeur, où la clé sera le texte original et les valeurs seront la traduction. Lors de la préparation, il est judicieux de créer une liste complète des phrases à traduire, puis de les traduire. Dans ce cas, vous pouvez spécifier `null` comme traduction, qui sera ignorée pendant la traduction. Vous pouvez également l'utiliser lorsque vous n'êtes pas sûr de savoir comment traduire correctement une phrase.
+Pour traduire un fichier json, vous devrez créer un fichier json - dictionnaire, qui contiendra des paires clé-valeur, où la clé sera le texte original et les valeurs seront la traduction.
+Lors de la préparation, il est judicieux de créer une liste complète des phrases à traduire, puis de les traduire. Dans ce cas, vous pouvez spécifier `null` comme traduction, qui sera ignorée pendant la traduction. Vous pouvez également l'utiliser lorsque vous n'êtes pas sûr de savoir comment traduire correctement une phrase.
 
 Postfixe au nom du fichier : `.translation.json`
 
 Exemple de traduction d'un fichier json : [lien](/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/descriptor.json.translation.json)
 
 ### Traduction des fichiers jar
-Pour l'instant, la majeure partie de l'interface utilisateur est contenue dans des fichiers jar. La création de traductions pour ces fichiers n'est pas différente des fichiers json, vous devez créer les mêmes paires clé-valeur, mais trouver des phrases pour la traduction est un peu plus difficile. C'est pourquoi nous avons préparé à l'avance un fichier modèle pour la traduction (il n'est maintenant nécessaire que pour deux fichiers), où le texte non traduit a une valeur de `null`.
+Pour l'instant, la majeure partie de l'interface utilisateur est contenue dans des fichiers jar. 
+La création de traductions pour ces fichiers n'est pas différente des fichiers json, vous devez créer les mêmes paires clé-valeur, mais trouver des phrases pour la traduction est un peu plus difficile. 
+C'est pourquoi nous avons préparé à l'avance un fichier modèle pour la traduction (il n'est maintenant nécessaire que pour deux fichiers), où le texte non traduit a une valeur de `null`.
 
 Traductions pour [starfarer.api.jar](/Translation/Languages/ru/starsector-core/starfarer.api.jar.translation.json) и [starfarer_obf.jar](/Translation/Languages/ru/starsector-core/starfarer_obf.jar.translation.json)
 
