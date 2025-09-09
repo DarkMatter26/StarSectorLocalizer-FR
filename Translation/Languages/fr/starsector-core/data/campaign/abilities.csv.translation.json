@@ -1,0 +1,34 @@
+{
+  "TranslatedColumns": [
+    "name",
+    "desc"
+  ],
+  "Translations": {
+    "Transponder": "Transpondeur",
+    "Broadcast your identity; required for legal trade.": "Transmet votre identité. Nécessaire pour commercer en toute légalité",
+    "Go Dark": "Passer en Mode Furtif",
+    "Reduce sensor profile at the cost of burn level.": "Réduit votre profil de détection au détriment de votre vitesse.",
+    "Active Sensor Burst": "Activer les Senseurs Actifs",
+    "Stop and increase detection range, fleet is more detectable.": "Stop et augmente votre portée de détection, la flotte est davantage détectable.",
+    "Emergency Burn": "Boost d'urgence",
+    "Briefly boost burn level at the cost of fuel and combat readiness.": "Augmente brièvement votre vitesse, en utilisant du carburant et cela baisse votre niveau de préparation au combat.",
+    "Sustained Burn": "Vitesse de croisière",
+    "Boost burn level at the cost of acceleration and wind-up time.": "Augmentez la vitesse au détriment de l'accélération et de la maniabilité.",
+    "Interdiction Pulse": "Impulsion d'interdiction",
+    "Slow down another fleet heading towards the source of the pulse.": "Ralentissez une autre flotte autour de la source de l'impulsion.",
+    "Scavenge": "Récupérer",
+    "Pick through a debris field for anything of value.": "Récupére dans un champ de débris tout ce qui a de la valeur.",
+    "Neutrino Detector": "Détecteur de Neutrino",
+    "Detect in-system entities at very long range; unreliable with false readings.": "Détecte les entités du système à très longue portée; peu fiable et peut générer de fausses alertes,",
+    "Transverse Jump": "Saut en Hyperespace",
+    "Jump into a system through a nascent gravity well, or directly into hyperspace.": "Sautez dans un système à travers un puits de gravité naissant, ou directement dans l'hyperespace.",
+    "Remote Survey": "Scanner Longue distance",
+    "Do a preliminary survey on all nearby planets remotely.": "Effectuer à distance une étude préliminaire de toutes les planètes proches.",
+    "Distress Call": "Appel de détresse",
+    "Issue a distress call.": "Émettre un appel de détresse.",
+    "Reverse Polarity": "Inversion de polarité",
+    "Adjust drive field to travel in the opposite direction in slipstreams.": "Dans un courant hyperspatial, on ajuste son champ moteur pour se déplacer dans la direction opposée.",
+    "Generate Slipsurge": "Générer un Micro-saut",
+    "Create a powerful short-lived slipstream useful for rapid travel.": "Crée un puissant courant hyperspatial de courte durée, utile pour les déplacements rapides."
+  }
+}

@@ -1,0 +1,25 @@
+Location: Outskirts of the Valhalla system
+Date: 189.08.20
+
+Hit and run attacks by Tri-Tachyon raider squadrons and certain of the more trusted mercenary captains bleed Hegemony resources throughout the Second AI War. The entire situation has become an embarrassment to the commanding Space Marshal -- while every proper fleet battle thus far has been won, the Hegemony Navy has been forced to abandon captured stations and even withdraw from entire planets as the supply convoys are harried, scattered, and plundered by Tri-Tachyon raiders. 
+
+A ceasefire has been called after the Hana Pacha atrocity which saw the deployment of forbidden planet-killer weapons, an act for which neither side claims responsibility and each claims was carried out by the other. While the politicians and diplomats shout accusations, the Hegemony quietly shores up its tenuous logistical situation and Tri-Tachyon deniably raids Hegemony convoys using piratical mercenaries.
+
+The pirates, however, are untrustworthy. They only offer at best a middling chance that they will even carry out their contracted missions. When the Tri-Tachyon Strategic Modeler (TSM) requires guaranteed results to ensure future contingencies, the Company deploys phase ships from their hidden arsenal-laboratories.
+
+As a young and ambitious executive keen to advance through Operations, you captain the Doom-class Phase Strike Cruiser at the head of a small task force. The lack of input to the TSM after the Hegemony bricked its own hyperwave communication system has led to increased variance in its Tactical Result Estimations (TREs), and it turns out that this is no convoy. This is something new: a counter-raider patrol, a hammer of fighters and converted civilian auxiliaries ready to pummel your task force on the anvil of an Enforcer-class Assault Destroyer.
+
+If you manage to beat them, you may yet show your merit and make Vice Fleet Director. If not, then at least no one will ever question the surety of your ambition and your devotion to the Company.
+[###StarSectorLocalization###]
+Местоположение: Окраины системы Валгаллы
+Дата: 189.08.20
+
+Во время второй войны ИИ, партизанская тактика заключалась в том, что Тахионнский флот и пираты, которых они нанимали, совершали набеги на линии снабжения Доминиона. Эта тактика поставила в затруднительное положение Главнокомандующего Гегемонии -  несмотря на победы во всех битвах, флот Гегемонии был вынужден отступать и оставлять врагу не только станции, но и целые планеты. Главным просчетом Главнокомандующего была потерял линий снабжения, которые грабились Три-Тахионнскими пиратами. 
+
+После безумного поступка Hana Pacha, использовавшего запрещенное оружие "Планетарного Аннигилятора", был подписан акт о прекращении огня. Ни одна сторона так и не взяла на себя ответственность за уничтожение планеты. В то время как политики и дипломаты на перебой обвиняют друг друга, Гегемония потихоньку укрепляла свои линии снабжения, а Три-Тахион скрытно использовал пиратов для набегов на Гегемонию.
+
+Однако пираты не заслуживали доверия. Очень часто бывали случаи, когда они просто исчезали, после получения кредитов за заказ. В то время, когда Tri-Tachyon Strategic Modeler (TSM) пытается добиться 100% выполнения контрактов по набегам на лини снабжения, Компания развертывает фазовые корабли в своих секретных лабораториях.
+
+Будучи молодым и амбициозным руководителем, вы стремитесь получить повышение по карьерной лестнице посредством реальных действий, поэтому вы находитесь в плохо укомплектованном крейсере Phase Strike Doom класса, с небольшим штурмовым отрядом. Из-за того, что система раннего оповещения была заблокирована, оценка результатов стратегических симуляций пришла в негодность из-за недостатка информации. На данный момент враг хочет нанести удар по специальному корпусу рейдеров перехватчиков, состоящему из бомбардировщиков, нескольких модернизированных гражданских судов, а также надежных Assault Destroyer Enforcer класса. 
+
+Если вам удастся победить их, вы продемонстрируете свои достоинства перед командованием и можете стать заместителем командующего флота. Если нет, никто никогда не усомнится в вашей преданности Компании.

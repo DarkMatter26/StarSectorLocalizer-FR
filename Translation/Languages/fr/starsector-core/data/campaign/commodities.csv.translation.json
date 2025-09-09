@@ -1,0 +1,41 @@
+{
+  "TranslatedColumns": [
+    "name",
+    "desc"
+  ],
+  "Translations": {
+    "Supplies": "Fournitures",
+    "Fuel": "Carburant",
+    "Crew": "Equipage",
+    "Marines": "Militaires",
+    "Food": "Nourriture",
+    "Organics": "Matières Organiques",
+    "Volatiles": "Gaz",
+    "Ore": "Minerais",
+    "Transplutonic Ore": "Minerai Transplutonic",
+    "Metals": "Métaux",
+    "Transplutonics": "Métal Transplutonics",
+    "Heavy Machinery": "Machineries Lourdes",
+    "Domestic Goods": "Produits Domestiques",
+    "Harvested Organs": "Organes Collectés",
+    "Recreational Drugs": "Drogues Récréatives",
+    "Heavy Armaments": "Armement lourd",
+    "Luxury Goods": "Produits de Luxe",
+    "Volturnian Lobster": "Homard Volturnian",
+    "Ship Hulls & Weapons": "Coques et Armes de vaisseau",
+    "AI Cores": "Noyau d'IA",
+    "Alpha Core": "Noyau d'IA-Alpha",
+    "Beta Core": "Noyau d'IA-Beta",
+    "Gamma Core": "Noyau d'IA-Gamma",
+    "Omega Core": "Noyau d'IA-Omega",
+    "Survey Data": "Données d'exploration",
+    "Class I Survey Data": "Données d'exploration de Classe I",
+    "Class II Survey Data": "Données d'exploration de Classe II",
+    "Class III Survey Data": "Données d'exploration de Classe III",
+    "Class IV Survey Data": "Données d'exploration de Classe IV",
+    "Class V Survey Data": "Données d'exploration de Classe V",
+    "Blueprints": "Plans",
+    "Ship Equipment": "Equipements de Vaisseau",
+    "Credits": "Crédits"
+  }
+}
