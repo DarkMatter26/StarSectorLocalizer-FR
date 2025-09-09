@@ -3,46 +3,46 @@
 <PageTitle>StarSector Web Tools by Kazbek</PageTitle>
 
 <div class="mb-3">
-    <div>Данный инструмент предназначен, чтобы достать перевод из переведенного файла от старой версии игры (файл 1) и оригинального файла старой версии игры (файл 2) и создания переведенного словаря для непереведенного файла новой версии игры (файл 3).</div>
+    <div>Cet outil est conçu pour extraire la traduction du fichier traduit de l'ancienne version du jeu (fichier 1) et du fichier original de l'ancienne version du jeu (fichier 2) et créer un dictionnaire traduit pour le fichier non traduit de la nouvelle version du jeu (fichier 3).</div>
 </div>
 <div class="alert alert-secondary mb-3">
     <span class="oi oi-pencil me-2" aria-hidden="true"></span>
-    <strong>Для создания чистого словаря</strong>
-    необходимо во все 3 строки указать один файл.
+    <strong>Pour créer un vocabulaire propre</strong>
+    vous devez spécifier un fichier dans les 3 lignes.
 </div>
 <div class="alert alert-secondary mb-3">
     <span class="oi oi-pencil me-2" aria-hidden="true"></span>
-    <strong>Для создание переведённого словаря</strong>
-    необходимо в первую указать переведённый, а в 2 и 3 оригинальный.
+    <strong>Pour créer un dictionnaire traduit</strong>
+    il faut mettre traduit dans le premier, et original dans les 2ème et 3ème.
 </div>
 <div class="alert alert-secondary mb-3">
     <span class="oi oi-pencil me-2" aria-hidden="true"></span>
-    <strong>Для обновления версии перевода</strong>
-    необходимо в 1 старый переведённый, в 2 старый оригинал, в 3 оригинал новой версии.
+    <strong>Pour mettre à jour la version de la traduction</strong>
+    Il faut en 1 l'ancienne traduction, en 2 l'ancien original, en 3 l'original de la nouvelle version.
 </div>
 <div class="mb-3">
     <div class="mb-3">
-        <label for="titleInput" class="form-label">Переведенный csv старой версии</label>
+        <label for="titleInput" class="form-label">Csv traduit de l'ancienne version</label>
         <InputFile OnChange="SetOldTranslatedFile" class="form-control" accept=".csv" />
     </div>
     <div class="mb-3">
-        <label for="titleInput" class="form-label">Оригинальный csv старой версии</label>
+        <label for="titleInput" class="form-label">Le csv original de l'ancienne version</label>
         <InputFile OnChange="SetOldOriginalFile" class="form-control" accept=".csv" />
     </div>
     <div class="mb-3">
-        <label for="titleInput" class="form-label">Оригинальный csv новой версии (для создания словаря)</label>
+        <label for="titleInput" class="form-label">Csv original de la nouvelle version (pour la création d'un dictionnaire)</label>
         <InputFile OnChange="SetNewOriginalFile" class="form-control" accept=".csv" />
     </div>
     @if (IsReadyToPrepare)
     {
         <div>
-            <button class="btn btn-primary" type="button" @onclick="PreProcessFilesAsync">Предпросмотр</button>
+            <button class="btn btn-primary" type="button" @onclick="PreProcessFilesAsync">Pre-Process</button>
         </div>
     }
     @if(PreProcessErrors.Count > 0)
     {
         <div class="mb-3">
-            <div>Возникли следующие проблемы:</div>
+            <div>Les problèmes suivants se sont posés :</div>
             @foreach(var e in PreProcessErrors)
             {
                 <div>@e</div>
@@ -56,11 +56,11 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Столбец</th>
-                        <th scope="col">Выбранное действие</th>
-                        <th scope="col">Выбрать ключом</th>
-                        <th scope="col">Выбрать для перевода</th>
-                        <th scope="col">Игнорировать</th>
+                        <th scope="col">Colonne</th>
+                        <th scope="col">Action sélectionnée</th>
+                        <th scope="col">Sélectionner avec la touche</th>
+                        <th scope="col">Sélectionner pour la traduction</th>
+                        <th scope="col">Ignorer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,16 +69,16 @@
                         <tr>
                             <th scope="row">@col.Name</th>
                             <td>@col.GetFriendlyType()</td>
-                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.Key">Сделать ключом</button></td>
-                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.ToTranslate">Для перевода</button></td>
-                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.Ignore">Игнорировать</button></td>
+                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.Key">En faire une clé</button></td>
+                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.ToTranslate">Traduire</button></td>
+                            <td><button class="btn btn-primary" type="button" @onclick="() => col.ColumnType = ViewModels.ColumnType.Ignore">Ignorerь</button></td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
         <div class="mb-3">
-            <button class="btn btn-primary" type="button" @onclick="SaveAsync">Создать словарь</button>
+            <button class="btn btn-primary" type="button" @onclick="SaveAsync">Créer un dictionnaire</button>
         </div>
         <div class="mb-3">
             @ResultString

@@ -4,44 +4,44 @@
              x:Class="StarSectorLauncher.Views.Translations.FromFileTranslationView">
     <VerticalStackLayout>
         <Label 
-            Text="Это бета версия локального переводчика Star Sector"
+            Text="Il s'agit d'une version bêta du traducteur local du jeu Star Sector"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Label Margin="0,10"
-               Text="Путь до папки с игрой:"/>
+               Text="Chemin d'accès au dossier du jeu :"/>
         <Entry x:Name="GamePathEntry"
                 Margin="0,10"
                 HorizontalOptions="FillAndExpand"
-                Placeholder="Путь до папки с игрой..." />
+                Placeholder="Le chemin d'accès au dossier du jeu..." />
         <Label Margin="0,10"                   
-                Text="Путь до папки с переводом (например '...\ru'):"/>
+                Text="Chemin d'accès au dossier contenant la traduction (par exemple '.../ru') :"/>
         <Entry x:Name="LocalizationPathEntry"
                Margin="0,10"
-               Placeholder="Путь до папки с игрой..." />
+               Placeholder="Le chemin d'accès au contenant la traduction..." />
 
         <HorizontalStackLayout>
             <CheckBox
                 x:Name="ProcessJarCheckBox"/>
             <Label
                 VerticalOptions="Center"
-                Text="Локализовать jar файлы (занимает больше времени)"/>
+                Text="Localiser les fichiers jar (prend plus de temps)"/>
             <CheckBox
                 Margin="20,0,0,0"
                 x:Name="CreatePatchFileCheckBox"/>
             <Label
                 VerticalOptions="Center"
-                Text="Создать папку с патчем"/>
+                Text="Créer un dossier avec le patch"/>
         </HorizontalStackLayout>
         <Label Margin="0,10"                   
-                Text="Путь до папки хранения патчей (будет создана новая подпапка):"/>
+                Text="Chemin d'accès au dossier de stockage du patch de langues (un nouveau sous-dossier sera créé) :"/>
         <Entry x:Name="PatchPathEntry"
                Margin="0,10"
-               Placeholder="Путь до папки хранения патчей..." />
-        <Button Text="Запустить перевод"
+               Placeholder="Le chemin d'accès au dossier racine de stockage du patch" />
+        <Button Text="Commencer la traduction"
                 HorizontalOptions="Start"
                 Clicked="OnStartTranslateButtonClicked" />
 
-        <Label Text="Лог:"
+        <Label Text="Journal :"
                Margin="0,10"/>
 
         <Label x:Name="LogLabel"
