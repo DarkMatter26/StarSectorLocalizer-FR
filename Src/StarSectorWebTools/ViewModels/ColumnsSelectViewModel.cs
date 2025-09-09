@@ -15,9 +15,9 @@
         public ColumnType ColumnType { get; set; }
         public string GetFriendlyType() => ColumnType switch
         {
-            ColumnType.Ignore => "Ничего не делать",
-            ColumnType.Key => "Это ключ",
-            ColumnType.ToTranslate => "Для перевода",
+            ColumnType.Ignore => "Ne rien faire.",
+            ColumnType.Key => "C'est la clé",
+            ColumnType.ToTranslate => "Traduire",
             _ => ColumnType.ToString()
         };
     }
