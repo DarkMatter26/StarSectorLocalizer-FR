@@ -98,7 +98,7 @@ public partial class CsvFromOldToNew
         byte[] data = System.Text.Encoding.UTF8.GetBytes(json);
         var fileStream = new MemoryStream(data);
 
-        ResultString = $"Не совпали ключи по порядку в старых файлах: {missedKeys}. Переведено строк в новом файле: {translatedNew}";
+        ResultString = $"Les clés sont en désordre dans les anciens dossiers : {missedKeys}. Lignes traduites dans le nouveau fichier : {translatedNew}";
         await FileSaverService.SaveAsFileAsync(NewOriginalFile.Name + ".translation.json", fileStream);
     }
 
@@ -124,7 +124,7 @@ public partial class CsvFromOldToNew
         }
         catch (Exception ex)
         {
-            PreProcessErrors.Add($"Ошибка разбора старого непереведенного файла.");
+            PreProcessErrors.Add($"Erreur d'analyse d'un ancien fichier non traduit.");
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.StackTrace);
         }
@@ -135,7 +135,7 @@ public partial class CsvFromOldToNew
         }
         catch (Exception ex)
         {
-            PreProcessErrors.Add($"Ошибка разбора старого переведенного файла.");
+            PreProcessErrors.Add($"Erreur lors de l'analyse d'un ancien fichier traduit.");
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.StackTrace);
         }
@@ -146,7 +146,7 @@ public partial class CsvFromOldToNew
         }
         catch (Exception ex)
         {
-            PreProcessErrors.Add($"Ошибка разбора нового непереведенного файла.");
+            PreProcessErrors.Add($"Erreur d'analyse d'un nouveau fichier non traduit.");
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.StackTrace);
         }
@@ -155,10 +155,10 @@ public partial class CsvFromOldToNew
             return;
 
         if (DtOldOriginal.Rows.Count != DtOldTranslated.Rows.Count)
-            PreProcessErrors.Add($"В старом непереведенном файле ({DtOldOriginal.Rows.Count}) и старом переведенном ({DtOldTranslated.Rows.Count}) не совпадает колиество строк.");
+            PreProcessErrors.Add($"Dans un vieux fichier non traduit ({DtOldOriginal.Rows.Count}) et l'ancien traduit ({DtOldTranslated.Rows.Count}) le nombre de lignes ne correspond pas.");
 
         if (DtOldOriginal.Columns.Count != DtOldTranslated.Columns.Count)
-            PreProcessErrors.Add($"В старом непереведенном файле ({DtOldOriginal.Columns.Count}) и старом переведенном ({DtOldTranslated.Columns.Count}) не совпадает колиество столбцов.");
+            PreProcessErrors.Add($"Dans un vieux fichier non traduit ({DtOldOriginal.Columns.Count}) et l'ancien traduit ({DtOldTranslated.Columns.Count}) le nombre de colonnes ne correspond pas.");
 
         List<string> columns = new List<string>();
         foreach(var c in DtNewOriginal.Columns.Cast<DataColumn>())
@@ -170,7 +170,7 @@ public partial class CsvFromOldToNew
 
         if(columns.Count < 2)
         {
-            PreProcessErrors.Add($"Недостаточно общих столбцов в файле, их всего {columns.Count}: {string.Join(", ", columns)}");
+            PreProcessErrors.Add($"Il n'y a pas assez de colonnes communes dans le fichier, il y a seulement {columns.Count}: {string.Join(", ", columns)}");
         }
 
         if (PreProcessErrors.Count > 0)
