@@ -1,44 +1,44 @@
 # StarSectorLocalizer
-# Как переводить файлы?
-На данный момент патчер может автоматичечки переводить файлы нескольких типов, а именно: txt, csv, json, jar. Все файлы переводов должны находиться в той же папке (по иерархии относительно корня игры), что и файл они переводят. В зависимости от типа файла и обработчика к его названию добавляется постфикс, а какой именно описано в каждом отдельном случае далее. Также учитывайте, что все ключи переводов чувствительны к регистру.
-### Перевод txt, java файлов
-Самыми простыми для переводя являются txt и java файлы. Для этого требуется в оригинальный файл на новую строку добавить `[###StarSectorLocalization###]`, а со следующей строки поместить перевод. Важно сохранить исходный текст в оригинале, т.к. патчер сравнивает его с тем, что найдёт в файле игры, и в случае обновления текста в новых версиях игры, можно будет уведомить о необходимости корректировки перевода. В точности разделителем между оригинальным текстом и переводом является строка вида `"\r\n[###StarSectorLocalization###]\r\n"`, код обработки txt (и по совместительству java) файлов можно найти [здесь](/Src/Localizer/Localizers/TxtGeneralLocalizer.cs). 
+# Comment traduire les fichiers ?
+Actuellement, le patcheur peut traduire automatiquement des fichiers de plusieurs types, à savoir : txt, csv, json, jar. Tous les fichiers de traduction doivent être situés dans le même dossier (hiérarchiquement relatif à la racine du jeu) que le fichier qu'ils traduisent. Selon le type de fichier et de gestionnaire, un postfixe est ajouté à son nom, et le type de postfixe est décrit dans chaque cas individuel ci-dessous. Notez également que toutes les clés de traduction sont sensibles à la casse.
+### Traduction de fichiers txt, java
+Les fichiers les plus faciles à traduire sont les fichiers txt et java. Pour ce faire, vous devez ajouter au fichier original sur une nouvelle ligne `[###StarSectorLocalization###]`, et mettez la traduction sur la ligne suivante. Il est important de conserver le texte original dans l'original, car le patcheur le compare avec ce qu'il trouve dans le fichier du jeu, et en cas de mise à jour du texte dans les nouvelles versions du jeu, vous pouvez notifier la nécessité de corriger la traduction. Le séparateur exact entre le texte original et la traduction est une chaîne comme `"\r\n[###StarSectorLocalization###]\r\n"`, le code pour traiter les fichiers txt (et en même temps java) se trouve [lien](/Src/Localizer/Localizers/TxtGeneralLocalizer.cs). 
 
-Постфикс к названию файла: `.translation.txt`
+Postfixe au nom du fichier : `.translation.txt`
 
-Пример перевода txt файла: [ссылка](/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/mission_text.txt.translation.txt)
+Exemple de traduction d'un fichier txt : [lien].(/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/mission_text.txt.translation.txt)
 
-### Перевод json файлов
-Для перевода json файла потребуется создать json файл - словарь, который будет содержать пары "ключ - значение", где в качестве ключа буднт выступать оригинальный текст, а в качестве значений перевод. Во время подготовки имеет смысл создать полный список фраз к переводу, а затем уже переводить. В таком случае в качестве перевода можно будет указывать значение `null`, которое будет игнорироваться при переводе. Либо его можно использовать, когда Вы точно не уверены как правильно перевести ту или иную фразу.
+### Traduire des fichiers json
+Pour traduire un fichier json, vous devrez créer un fichier json - un dictionnaire, qui contiendra des paires clé-valeur, où la clé sera le texte original et les valeurs seront la traduction. Lors de la préparation, il est judicieux de créer une liste complète des phrases à traduire, puis de les traduire. Dans ce cas, vous pouvez spécifier `null` comme traduction, qui sera ignorée pendant la traduction. Vous pouvez également l'utiliser lorsque vous n'êtes pas sûr de savoir comment traduire correctement une phrase.
 
-Постфикс к названию файла: `.translation.json`
+Postfixe au nom du fichier : `.translation.json`
 
-Пример перевода json файла: [ссылка](/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/descriptor.json.translation.json)
+Exemple de traduction d'un fichier json : [lien](/Translation/Languages/ru/starsector-core/data/missions/afistfulofcredits/descriptor.json.translation.json)
 
-### Перевод jar файлов
-На данный момент основная часть пользовательского интерфейса заключена в jar файлах. Создание перевода для них ничем не отличается по виду от json файлов, требуется создать такие же пары "ключ - значение", однако, найти фразы для перевода несколько сложнее. Поэтому были заранее подготовлены для файла-шаблона для перевода (сейчас это необходимо только для двух файлов), где непереведенный текст имеет значение `null`.
+### Traduction des fichiers jar
+Pour l'instant, la majeure partie de l'interface utilisateur est contenue dans des fichiers jar. La création de traductions pour ces fichiers n'est pas différente des fichiers json, vous devez créer les mêmes paires clé-valeur, mais trouver des phrases pour la traduction est un peu plus difficile. C'est pourquoi nous avons préparé à l'avance un fichier modèle pour la traduction (il n'est maintenant nécessaire que pour deux fichiers), où le texte non traduit a une valeur de `null`.
 
-Переводы для [starfarer.api.jar](/Translation/Languages/ru/starsector-core/starfarer.api.jar.translation.json) и [starfarer_obf.jar](/Translation/Languages/ru/starsector-core/starfarer_obf.jar.translation.json)
+Traductions pour [starfarer.api.jar](/Translation/Languages/ru/starsector-core/starfarer.api.jar.translation.json) и [starfarer_obf.jar](/Translation/Languages/ru/starsector-core/starfarer_obf.jar.translation.json)
 
-Во время перевода jar файлов происходит их базовый анализ, чтобы предотвратить переименование названия переменных и параметров (например, строковая константа "ship" иногда является параметром используемым в динамическом вызове, а не текстом интерфейса), но это блокирует перевод фразы во всём классе целиком, из-за чего могут оставаться непереведенные места даже если фраза указана в словаре.
+Lors de la traduction des fichiers jar, une analyse de base est effectuée pour empêcher le renommage des noms de variables et de paramètres (par exemple, la constante de chaîne "ship" est parfois un paramètre utilisé dans un appel dynamique plutôt que dans le texte de l'interface), mais cela bloque la traduction d'une phrase dans l'ensemble de la classe, ce qui peut laisser des endroits non traduits même si la phrase est spécifiée dans le dictionnaire.
 
-### Перевод csv файлов
+### Traduire des fichiers csv
 
-При переводе csv файлов создаётся json файл в котоом указывается перечень столбцов, которые требуется переводить (в элементе `"TranslatedColumns"`), и переводы "ключ - значение" (в элементе `"Translations"`).
+Lors de la traduction de fichiers csv, un fichier json est créé qui contient la liste des colonnes à traduire (dans l'élément ``TranslatedColumns``) et les traductions clé-valeur (dans l'élément ``Translations``).
 
-Постфикс к названию файла: `.translation.json`
+Postfixe au nom du fichier : `.translation.json`
 
-Пример перевода json файла: [ссылка](/Translation/Languages/ru/starsector-core/data/strings/descriptions.csv.translation.json)
+Exemple de traduction d'un fichier json : [lien].(/Translation/Languages/ru/starsector-core/data/strings/descriptions.csv.translation.json)
 
-### Прочие файлы
+### Autres fichiers
 
-Если в папке с переводами содержится файл называющийся в точности как оригинальный, то он просто его перезапишет. Так, в частности, работает локализация шрифтов.
+Si le dossier des traductions contient un fichier dont le nom est identique à celui de l'original, il l'écrasera tout simplement. C'est ainsi que fonctionne la localisation des polices.
 
-### Локализация шрифтов
+#### Localisation des polices
 
-В оригинальных шрифтах игры отсутствуют символы для отображения русских букв (да и практически всех, кроме английского), поэтому требуется заменять их собственными шрифтами с поддержкой интересующего языка. Во время локализации эти файлы просто заменяются.
+Les polices de caractères originales du jeu ne contiennent pas de symboles permettant d'afficher les lettres russes (et pratiquement toutes les lettres sauf l'anglais), vous devez donc les remplacer par vos propres polices de caractères prenant en charge la langue qui vous intéresse. Lors de la localisation, ces fichiers sont simplement remplacés.
 
-Локализованные шрифты находятся в [этой папке](/Translation/Languages/ru/starsector-core/graphics/fonts).
+Les polices localisées se trouvent dans [ce dossier].(/Translation/Languages/ru/starsector-core/graphics/fonts).
 
-## Пользовательские переводы модов
-1. Перевод от [WhitePulsar](https://github.com/WhitePulsar/StarSectorLocalizer-Machine-MODS)
+## Traductions personnalisées
+1. Traduit par [WhitePulsar](https://github.com/WhitePulsar/StarSectorLocalizer-Machine-MODS)
